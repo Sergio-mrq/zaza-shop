@@ -1,0 +1,105 @@
+/* Styles généraux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a2e;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #ff007f;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.5em;
+}
+
+/* Section exclusivité */
+.highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff007f, #8a2be2);
+    padding: 40px;
+}
+
+.highlight img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.highlight-text {
+    margin-left: 20px;
+}
+
+.highlight-text h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #ff007f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Produits */
+.products {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: #2a2a4e;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #ff007f;
+}
