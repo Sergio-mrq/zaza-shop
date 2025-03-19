@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous Contacter - ZazaBox</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../PARTIE ACCEUIL/accueil.html">Accueil</a></li>
+                <li><a href="boutique.html">Boutique</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="contact-container">
+        <h2>Envoyez-nous un message</h2>
+        <form id="contact-form">
+            <div class="input-group">
+                <label for="name"><i class="fas fa-user"></i> Nom :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="message"><i class="fas fa-comment"></i> Message :</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit">Envoyer <i class="fas fa-paper-plane"></i></button>
+        </form>
+    </section>
+    
+    <section class="contact-box">
+        <h3>Contactez-nous</h3>
+        <p>📍 Adresse : Marseille, France</p>
+        <p>📞 Téléphone : +33 6 12 34 56 78</p>
+        <p>📧 Email : contact@zazabox.com</p>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
