@@ -1,0 +1,327 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f8f8f8;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background: #ff147b;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    width: 120px;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background:#ff147b;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 1.8s ease-in-out forwards;
+}
+
+.btn-hero {
+    background: #fff;
+    color: #ff3385;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.btn-hero:hover {
+    background: #ff80b3;
+    color: #fff;
+}
+
+/* Box List Section */
+.container {
+    padding: 50px 20px;
+}
+
+.box-container-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.box-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box-item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 30px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px; /* Ajustement de la hauteur pour uniformiser les cartes */
+}
+
+.box-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.box-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.box-item:hover img {
+    transform: scale(1.1);
+}
+
+.box-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Button Styles */
+.btn-buy {
+    background: #ff3385;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centre le texte et l'icône du bouton */
+    gap: 8px;
+    transition: background 0.3s ease;
+    margin-top: auto; /* Pousse le bouton vers le bas */
+    width: 100%; /* Prend toute la largeur de la carte */
+    box-sizing: border-box; /* Assure une gestion correcte des marges et padding */
+}
+
+.btn-buy:hover {
+    background: #ff80b3;
+}
+
+
+/* Badge "Nouveau" ou "Populaire" */
+.box-item::after {
+    content: "Nouveau";
+    background: #ff80b3;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    display: none;
+}
+
+.box-item:hover::after {
+    display: block;
+}
+
+/* Button Styles */
+.btn-buy {
+    background: #ff3385;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.3s ease;
+    margin-top: auto;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.btn-buy:hover {
+    background: #ff80b3;
+    transform: scale(1.05);
+}
+
+/* Cart Overlay */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+}
+
+.cart-overlay .cart {
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.cart-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cart-overlay .btn-close {
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cart-overlay .btn-checkout {
+    background: #ff3385;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.cart-overlay .btn-checkout:hover {
+    background: #ff80b3;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .box-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-item {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-hero {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .box-item {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation de FadeIn pour les titres */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
